@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package proto.blog;
+
+import "proto/blog/get_post_request.proto";
+import "proto/blog/get_post_response.proto";
+
+service PostService {
+  rpc GetPost(GetPostRequest) returns (GetPostResponse) {}
+}

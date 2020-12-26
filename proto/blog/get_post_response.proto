@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package proto.blog;
+
+import "proto/blog/post.proto";
+
+message GetPostResponse {
+  Post post = 1;
+}

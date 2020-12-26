@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+package proto.blog;
+
+message GetPostRequest {
+  int32 id = 1;
+}

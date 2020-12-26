@@ -1,0 +1,29 @@
+version: "3"
+
+services:
+  protoc:
+    build:
+      context: .
+      args:
+        - PROTOBUF_VERSION=3.14.0
+      dockerfile: dockerfiles/Dockerfile.protoc
+    volumes:
+      - .:/myapp
+    command: bin/protoc
+  rails:
+    build:
+      context: .
+      dockerfile: dockerfiles/Dockerfile.rails
+    volumes:
+      - .:/myapp
+    command: bin/rails s -b 0.0.0.0 -p 3000
+    depends_on:
+      - protoc
+  envoy:
+    image: envoyproxy/envoy-alpine:v1.16-latest
+    volumes:
+      - ./envoy:/etc/envoy
+    ports:
+      - 3000:3000
+    depends_on:
+      - rails

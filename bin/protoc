@@ -1,0 +1,9 @@
+#!/bin/sh
+
+APP_ROOT=$(cd $(dirname $0); cd ..; pwd)
+OUTPUT_PATH=$APP_ROOT/lib
+
+grpc_tools_ruby_protoc -I $APP_ROOT \
+  --ruby_out=$OUTPUT_PATH \
+  --grpc_out=$OUTPUT_PATH \
+  $APP_ROOT/proto/**/*.proto

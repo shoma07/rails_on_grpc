@@ -68,6 +68,17 @@ GEM
     ffi (1.14.2)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    google-protobuf (3.14.0)
+    google-protobuf (3.14.0-universal-darwin)
+    googleapis-common-protos-types (1.0.5)
+      google-protobuf (~> 3.11)
+    grpc (1.34.0)
+      google-protobuf (~> 3.13)
+      googleapis-common-protos-types (~> 1.0)
+    grpc (1.34.0-universal-darwin)
+      google-protobuf (~> 3.13)
+      googleapis-common-protos-types (~> 1.0)
+    grpc-tools (1.34.0)
     i18n (1.8.5)
       concurrent-ruby (~> 1.0)
     listen (3.3.3)
@@ -139,10 +150,14 @@ GEM
     zeitwerk (2.4.2)
 
 PLATFORMS
+  ruby
   x86_64-darwin-19
 
 DEPENDENCIES
   byebug
+  google-protobuf (= 3.14.0)
+  grpc (~> 1.34)
+  grpc-tools (~> 1.34)
   listen (~> 3.3)
   puma (~> 5.0)
   rails (~> 6.1.0)

@@ -19,3 +19,7 @@
 !/tmp/pids/.keep
 
 .byebug_history
+
+# Ignore proto
+/lib/proto/*
+!/lib/proto/.keep

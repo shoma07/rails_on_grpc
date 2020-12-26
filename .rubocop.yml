@@ -2,6 +2,7 @@ AllCops:
   NewCops: enable
   Exclude:
     - bin/**/*
+    - lib/proto/**/*
     - Gemfile.lock
 Layout/SpaceAroundMethodCallOperator:
   Enabled: true
@@ -23,6 +24,9 @@ Lint/ToEnumArguments:
   Enabled: true
 Lint/UnmodifiedReduceAccumulator:
   Enabled: true
+Naming/AccessorMethodName:
+  Exclude:
+    - app/controllers/**/*
 Style/ArgumentsForwarding:
   Enabled: true
 Style/CollectionCompact:
