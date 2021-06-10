@@ -6,7 +6,7 @@ services:
       context: .
     volumes:
       - .:/usr/src/app
-    command: bin/rails s -b 0.0.0.0 -p 3000
+    command: sh -c "bin/protoc && bin/rails s -b 0.0.0.0 -p 3000"
   envoy:
     image: envoyproxy/envoy-alpine:v1.18-latest
     volumes:
