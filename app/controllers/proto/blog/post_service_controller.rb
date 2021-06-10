@@ -8,7 +8,7 @@ module Proto
       #
       # @return [String]
       def get_post
-        render proto: response_message_class.new(
+        render proto: rpc_desc.output.new(
           post: Proto::Blog::Post.new(id: decode_params[:id])
         )
       end
