@@ -1,51 +1,13 @@
+require:
+  - rubocop-performance
+  - rubocop-rails
+  - rubocop-thread_safety
 AllCops:
   NewCops: enable
   Exclude:
     - bin/**/*
     - lib/proto/**/*
     - Gemfile.lock
-Layout/SpaceAroundMethodCallOperator:
-  Enabled: true
-Lint/RaiseException:
-  Enabled: true
-Lint/StructNewOverride:
-  Enabled: true
-Lint/DuplicateBranch:
-  Enabled: true
-Lint/DuplicateRegexpCharacterClassElement:
-  Enabled: true
-Lint/EmptyBlock:
-  Enabled: true
-Lint/EmptyClass:
-  Enabled: true
-Lint/NoReturnInBeginEndBlocks:
-  Enabled: true
-Lint/ToEnumArguments:
-  Enabled: true
-Lint/UnmodifiedReduceAccumulator:
-  Enabled: true
 Naming/AccessorMethodName:
   Exclude:
     - app/controllers/**/*
-Style/ArgumentsForwarding:
-  Enabled: true
-Style/CollectionCompact:
-  Enabled: true
-Style/DocumentDynamicEvalDefinition:
-  Enabled: true
-Style/NegatedIfElseCondition:
-  Enabled: true
-Style/NilLambda:
-  Enabled: true
-Style/RedundantArgument:
-  Enabled: true
-Style/SwapValues:
-  Enabled: true
-Style/ExponentialNotation:
-  Enabled: true
-Style/HashEachMethods:
-  Enabled: true
-Style/HashTransformKeys:
-  Enabled: true
-Style/HashTransformValues:
-  Enabled: true

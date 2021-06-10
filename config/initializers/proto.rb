@@ -2,7 +2,7 @@
 
 Rails.application.config.x.grpc_services = Dir[
   Rails.root.join('lib/proto/**/*.rb')
-].sort.filter_map do |file|
+].filter_map do |file|
   const = file.sub(/\A#{Rails.root.join('lib\/')}/, '')
               .sub(/(_services)?_pb\.rb\z/, '').camelize
   require file unless Object.const_defined?(const)
